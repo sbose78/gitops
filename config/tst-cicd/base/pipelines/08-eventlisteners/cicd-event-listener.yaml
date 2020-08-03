@@ -43,7 +43,7 @@ spec:
     - cel:
         filter: (header.match('X-GitHub-Event', 'pull_request') && body.action ==
           'opened' || body.action == 'synchronize') && body.pull_request.head.repo.full_name
-          == 'sbose78/taxi'
+          == 'sbose78/fruit-app'
     - github:
         secretRef:
           namespace: tst-cicd
