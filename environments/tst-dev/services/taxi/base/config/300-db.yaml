@@ -1,9 +1,0 @@
-apiVersion: postgresql.baiju.dev/v1alpha1
-kind: Database
-metadata:
-  name: demo-database
-  namespace: tst-dev
-spec:
-  image: docker.io/postgres
-  imageName: postgres
-  dbName: postgres
