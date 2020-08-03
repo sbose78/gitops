@@ -7,7 +7,7 @@ metadata:
 spec:
   params:
   - name: imageRepo
-    value: quay.io/shbose/taxi
+    value: quay.io/shbose/fruit-app
   - name: tlsVerify
     value: "true"
 status: {}
