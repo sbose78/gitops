@@ -21,7 +21,7 @@ environments:
         bindings:
         - tst-dev-taxi-binding
         - github-pr-binding
-    source_url: https://github.com/sbose78/taxi.git
+    source_url: https://github.com/sbose78/fruit-app
     webhook:
       secret:
         name: webhook-secret-tst-dev-taxi
