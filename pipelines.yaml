@@ -2,29 +2,33 @@ config:
   argocd:
     namespace: argocd
   pipelines:
-    name: tst-cicd
+    name: ford-cicd
 environments:
 - apps:
-  - name: app-taxi
+  - name: app-fruit-app
     services:
-    - taxi
-  name: tst-dev
+    - fruit-app
+  name: ford-dev
   pipelines:
     integration:
       bindings:
       - github-pr-binding
       template: app-ci-template
   services:
-  - name: taxi
+  - name: fruit-app
     pipelines:
       integration:
         bindings:
-        - tst-dev-taxi-binding
+        - ford-dev-fruit-app-binding
         - github-pr-binding
-    source_url: https://github.com/sbose78/taxi.git
+<<<<<<< HEAD
+    source_url: https://github.com/sbose78/fruit-app.git
+=======
+    source_url: https://github.com/sbose78/fruit-app
+>>>>>>> 3a54583f07ac42cf05841aebcde7e05965a4c1f0
     webhook:
       secret:
-        name: webhook-secret-tst-dev-taxi
-        namespace: tst-cicd
-- name: tst-stage
+        name: webhook-secret-ford-dev-fruit-app
+        namespace: ford-cicd
+- name: ford-stage
 gitops_url: https://github.com/sbose78/gitops.git
