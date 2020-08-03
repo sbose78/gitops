@@ -21,6 +21,12 @@ spec:
       containers:
       - image: quay.io/shbose/taxi:sbose78-patch-12-aaea2eb03f821ca03977a0e3f511a6d6d5e92c1b
         imagePullPolicy: Always
+        envFrom:
+            - secretRef:
+                name: binding-request
+        env:
+            - name: ServiceBindingOperatorChangeTriggerEnvVar
+              value: '2020-08-03T18:32:52Z'
         name: taxi
         ports:
         - containerPort: 8080
