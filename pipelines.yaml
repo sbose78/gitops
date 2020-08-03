@@ -21,7 +21,11 @@ environments:
         bindings:
         - ford-dev-fruit-app-binding
         - github-pr-binding
+<<<<<<< HEAD
     source_url: https://github.com/sbose78/fruit-app.git
+=======
+    source_url: https://github.com/sbose78/fruit-app
+>>>>>>> 3a54583f07ac42cf05841aebcde7e05965a4c1f0
     webhook:
       secret:
         name: webhook-secret-ford-dev-fruit-app
