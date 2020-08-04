@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: fruit-app
+  namespace: bose-dev
+spec:
+  to:
+    kind: Service
+    name: fruit-app
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
