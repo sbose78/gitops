@@ -19,7 +19,7 @@ spec:
         app.kubernetes.io/part-of: app-fruit-app
     spec:
       containers:
-      - image: nginxinc/nginx-unprivileged:latest
+      - image: quay.io/shbose/fruit-app:master-352edfe82a88301130a0fafc8bd87655ed382659
         imagePullPolicy: Always
         name: fruit-app
         ports:
