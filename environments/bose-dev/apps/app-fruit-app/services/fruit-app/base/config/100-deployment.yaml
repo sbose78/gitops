@@ -20,6 +20,9 @@ spec:
     spec:
       containers:
       - image: quay.io/shbose/fruit-app:master-352edfe82a88301130a0fafc8bd87655ed382659
+        envFrom:
+            - secretRef:
+                name: fruit-app-managed-credentials
         imagePullPolicy: Always
         name: fruit-app
         ports:
