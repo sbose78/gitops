@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    app.openshift.io/vcs-uri: https://github.com/fruit-app/gitops.git
+  creationTimestamp: null
+  name: bose-cicd
+spec: {}
+status: {}

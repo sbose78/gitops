@@ -2,33 +2,27 @@ config:
   argocd:
     namespace: argocd
   pipelines:
-    name: ford-cicd
+    name: bose-cicd
 environments:
 - apps:
   - name: app-fruit-app
     services:
-    - fruit-app
-  name: ford-dev
+    - name: fruit-app
+      pipelines:
+        integration:
+          bindings:
+          - bose-dev-app-fruit-app-fruit-app-binding
+          - github-push-binding
+      source_url: https://github.com/sbose78/fruit-app.git
+      webhook:
+        secret:
+          name: webhook-secret-bose-dev-fruit-app
+          namespace: bose-cicd
+  name: bose-dev
   pipelines:
     integration:
       bindings:
-      - github-pr-binding
+      - github-push-binding
       template: app-ci-template
-  services:
-  - name: fruit-app
-    pipelines:
-      integration:
-        bindings:
-        - ford-dev-fruit-app-binding
-        - github-pr-binding
-<<<<<<< HEAD
-    source_url: https://github.com/sbose78/fruit-app.git
-=======
-    source_url: https://github.com/sbose78/fruit-app
->>>>>>> 3a54583f07ac42cf05841aebcde7e05965a4c1f0
-    webhook:
-      secret:
-        name: webhook-secret-ford-dev-fruit-app
-        namespace: ford-cicd
-- name: ford-stage
-gitops_url: https://github.com/sbose78/gitops.git
+- name: bose-stage
+gitops_url: https://github.com/fruit-app/gitops.git
