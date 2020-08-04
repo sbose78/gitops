@@ -32,7 +32,7 @@ spec:
   project: default
   source:
     path: config/argocd
-    repoURL: https://github.com/fruit-app/gitops.git
+    repoURL: https://github.com/sbose78/gitops.git
   syncPolicy:
     automated:
       prune: true

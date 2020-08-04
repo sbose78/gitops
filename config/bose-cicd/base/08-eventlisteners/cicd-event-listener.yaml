@@ -17,7 +17,7 @@ spec:
           secretName: gitops-webhook-secret
     - cel:
         filter: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
-          == 'fruit-app/gitops')
+          == 'sbose78/gitops')
         overlays:
         - expression: split(body.ref,'/')[2]
           key: ref

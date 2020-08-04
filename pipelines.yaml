@@ -25,4 +25,4 @@ environments:
       - github-push-binding
       template: app-ci-template
 - name: bose-stage
-gitops_url: https://github.com/fruit-app/gitops.git
+gitops_url: https://github.com/sbose78/gitops.git

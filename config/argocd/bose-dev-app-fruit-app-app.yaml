@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: environments/bose-dev/apps/app-fruit-app/base
-    repoURL: https://github.com/fruit-app/gitops.git
+    repoURL: https://github.com/sbose78/gitops.git
   syncPolicy:
     automated:
       prune: true
