@@ -25,21 +25,21 @@ spec:
     template:
       name: ci-dryrun-from-push-template
   - bindings:
-    - name: bose-dev-app-fruit-app-fruit-app-binding
+    - name: bose-dev-app-inventory-inventory-binding
     - name: github-push-binding
     interceptors:
     - github:
         secretRef:
           namespace: bose-cicd
           secretKey: webhook-secret-key
-          secretName: webhook-secret-bose-dev-fruit-app
+          secretName: webhook-secret-bose-dev-inventory
     - cel:
         filter: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
-          == 'sbose78/fruit-app')
+          == 'sbose78/inventory')
         overlays:
         - expression: split(body.ref,'/')[2]
           key: ref
-    name: app-ci-build-from-push-fruit-app
+    name: app-ci-build-from-push-inventory
     template:
       name: app-ci-template
 status:

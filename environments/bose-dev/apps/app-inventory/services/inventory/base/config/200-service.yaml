@@ -3,9 +3,9 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app.kubernetes.io/name: fruit-app
-    app.kubernetes.io/part-of: app-fruit-app
-  name: fruit-app
+    app.kubernetes.io/name: inventory
+    app.kubernetes.io/part-of: app-inventory
+  name: inventory
   namespace: bose-dev
 spec:
   ports:
@@ -14,7 +14,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app.kubernetes.io/name: fruit-app
-    app.kubernetes.io/part-of: app-fruit-app
+    app.kubernetes.io/name: inventory
+    app.kubernetes.io/part-of: app-inventory
 status:
   loadBalancer: {}

@@ -1,11 +1,11 @@
 apiVersion: apps.openshift.io/v1alpha1
 kind: ServiceBindingRequest
 metadata:
-  name: fruit-app-managed-credentials
+  name: inventory-managed-credentials
   namespace: bose-dev
 spec:
   backingServiceSelector:
     group: postgresql.baiju.dev
     version: v1alpha1
     kind: Database
-    resourceRef: fruit-db
+    resourceRef: inventory-db

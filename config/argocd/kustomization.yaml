@@ -1,5 +1,5 @@
 resources:
 - argo-app.yaml
 - argocd.yaml
-- bose-dev-app-fruit-app-app.yaml
+- bose-dev-app-inventory-app.yaml
 - cicd-app.yaml

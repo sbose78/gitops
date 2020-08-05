@@ -2,29 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
-  name: fruit-app
+  name: inventory
   namespace: bose-dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: fruit-app
-      app.kubernetes.io/part-of: app-fruit-app
+      app.kubernetes.io/name: inventory
+      app.kubernetes.io/part-of: app-inventory
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/name: fruit-app
-        app.kubernetes.io/part-of: app-fruit-app
+        app.kubernetes.io/name: inventory
+        app.kubernetes.io/part-of: app-inventory
     spec:
       containers:
-      - image: quay.io/shbose/fruit-app:master-352edfe82a88301130a0fafc8bd87655ed382659
+      - image: nginxinc/nginx-unprivileged:latest
         envFrom:
             - secretRef:
-                name: fruit-app-managed-credentials
+                name: inventory-managed-credentials
         imagePullPolicy: Always
-        name: fruit-app
+        name: inventory
         ports:
         - containerPort: 8080
         resources: {}

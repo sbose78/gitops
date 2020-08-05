@@ -2,12 +2,12 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   creationTimestamp: null
-  name: bose-dev-app-fruit-app-fruit-app-binding
+  name: bose-dev-app-inventory-inventory-binding
   namespace: bose-cicd
 spec:
   params:
   - name: imageRepo
-    value: quay.io/shbose/fruit-app
+    value: quay.io/shbose/bluetooth-module-inventory
   - name: tlsVerify
     value: "true"
 status: {}

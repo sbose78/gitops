@@ -1,12 +1,12 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: fruit-app
+  name: inventory
   namespace: bose-dev
 spec:
   to:
     kind: Service
-    name: fruit-app
+    name: inventory
     weight: 100
   port:
     targetPort: http

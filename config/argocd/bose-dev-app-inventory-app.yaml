@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   creationTimestamp: null
-  name: bose-dev-app-fruit-app
+  name: bose-dev-app-inventory
   namespace: argocd
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: environments/bose-dev/apps/app-fruit-app/base
+    path: environments/bose-dev/apps/app-inventory/base
     repoURL: https://github.com/sbose78/gitops.git
   syncPolicy:
     automated:
